@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-//import 'package:firebase_admob/firebase_admob.dart'; //TODO aggiungere ads
-//TODO ADD firebase_admob: ^0.11.0 TO pubspec.yaml
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
