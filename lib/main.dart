@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sembast/sembast.dart';
-import 'package:sembast/sembast_io.dart';
-import 'package:path/path.dart';
+//import 'package:sembast/sembast.dart';
+//import 'package:sembast/sembast_io.dart';
+//import 'package:path/path.dart';
 
-import 'settingScreen.dart';
+import 'SettingScreen.dart';
 import 'Things.dart';
 
 // se c'è un problema con la compilazione xcode eseguire questo codice xattr -cr build/ios/Debug-iphone[simulator o os]
@@ -38,7 +38,7 @@ class _TepHomePageState extends State<TepHomePage> {
             icon: Icon(Icons.settings),
             onPressed: () {
               MaterialPageRoute route =
-                  new MaterialPageRoute(builder: (_) => settingScreen());
+                  new MaterialPageRoute(builder: (_) => SettingScreen());
               Navigator.push(context, route);
             },
           )

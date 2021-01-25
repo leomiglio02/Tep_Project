@@ -1,20 +1,15 @@
-import 'dart:html';
 import 'dart:io';
 import 'package:link/link.dart';
 import 'package:flutter/material.dart';
 
-import 'package:shared_preferences/shared_preferences.dart';
-
-class settingScreen extends StatefulWidget {
+class SettingScreen extends StatefulWidget {
   @override
-  _settingScreenState createState() => _settingScreenState();
+  _SettingScreenState createState() => _SettingScreenState();
 }
 
-class _settingScreenState extends State<settingScreen> {
+class _SettingScreenState extends State<SettingScreen> {
   String about = "TèP developed by Leonardo Migliorelli";
   String site = "http://www.leomiglio.com";
-  bool enabled = false;// TODO fai funzionare ilcheckbox
-
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -25,9 +20,9 @@ class _settingScreenState extends State<settingScreen> {
               child: Column(
                 children: <Widget>[
                   CheckboxListTile(
-                    value: enabled,
+                    value: true,
                     title: Text("This is a CheckBoxPreference"),
-                    onChanged: (value) => setState(() => enabled = value),
+                    onChanged: (value) {},
                   ),
                   SwitchListTile(
                     value: false,
