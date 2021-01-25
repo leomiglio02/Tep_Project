@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Things.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,12 +15,19 @@ class TepHomePage extends StatefulWidget {
 }
 
 class _TepHomePageState extends State<TepHomePage> {
+  List<Things> things = new List<Things>();
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(title: Text("TèP"), actions: [
           IconButton(icon: Icon(Icons.settings), onPressed: () => settingsBtn())
         ]),
-        body: Center(),
+        body: ListView.builder(
+            itemCount: things.length,
+            itemBuilder: ((BuildContext context, int posizione) => Card(
+                elevation: 2,
+                child: ListTile(
+                    title: Text(things[posizione].titolo),
+                    subtitle: Text(things[posizione].text))))),
       );
 
   //addToList() {};
