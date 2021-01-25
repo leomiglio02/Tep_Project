@@ -80,6 +80,12 @@
       "languageVersion": "2.10"
     },
     {
+      "name": "sembast",
+      "rootUri": "file:///usr/local/Caskroom/flutter/1.22.5/flutter/.pub-cache/hosted/pub.dartlang.org/sembast-2.4.8+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.9"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///usr/local/Caskroom/flutter/1.22.5/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -108,6 +114,12 @@
       "rootUri": "file:///usr/local/Caskroom/flutter/1.22.5/flutter/.pub-cache/hosted/pub.dartlang.org/string_scanner-1.1.0-nullsafety.1",
       "packageUri": "lib/",
       "languageVersion": "2.10"
+    },
+    {
+      "name": "synchronized",
+      "rootUri": "file:///usr/local/Caskroom/flutter/1.22.5/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-2.2.0+2",
+      "packageUri": "lib/",
+      "languageVersion": "2.8"
     },
     {
       "name": "term_glyph",
@@ -140,7 +152,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-01-19T22:34:28.184199Z",
+  "generated": "2021-01-25T17:32:44.149742Z",
   "generator": "pub",
   "generatorVersion": "2.10.4"
 }

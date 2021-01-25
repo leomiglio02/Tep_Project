@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sembast/sembast.dart';
 import 'Things.dart';
+
 // se c'è un problema con la compilazione xcode eseguire questo codice xattr -cr build/ios/Debug-iphone[simulator o os] 
 // simulator se si testa in un simulatore
 // os se si testa in un dispositivo
@@ -43,7 +45,7 @@ class _TepHomePageState extends State<TepHomePage> {
   //addToList() {};
   settingsBtn() => {}; //TepHomePage();
   void getDB() {
-    thing = [Things("Titolo", "Testo")];
+    thing = [Things("Esempio Titolo", "Esempio Testo")]; // TODO completa con la connessione al database
     setState(() => thing = thing);
   }
 }
