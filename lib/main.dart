@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Things.dart';
+// se c'è un problema con la compilazione xcode eseguire questo codice xattr -cr build/ios/Debug-iphone[simulator o os] 
+// simulator se si testa in un simulatore
+// os se si testa in un dispositivo
 
 void main() => runApp(MyApp());
 
