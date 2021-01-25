@@ -51,8 +51,7 @@ class _TepSettingsPageState extends State<TepHomePage> {
 }
 
 ColorScheme tepColorScheme = ColorScheme(
-  primary: Colors.blue[500],
-  //or 25,118,210
+  primary: Colors.blue[500], //or 25,118,210
   onPrimary: Colors.black,
   primaryVariant: Colors.blue[700],
 
