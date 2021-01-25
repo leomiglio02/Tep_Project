@@ -15,26 +15,37 @@ class TepHomePage extends StatefulWidget {
 }
 
 class _TepHomePageState extends State<TepHomePage> {
-  List<Things> things = new List<Things>();
-  
+  List<Things> thing = new List<Things>();
+
+  @override
+  void initState() {
+    getDB();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(title: Text("TèP"), actions: [
           IconButton(icon: Icon(Icons.settings), onPressed: () => settingsBtn())
         ]),
         body: ListView.builder(
-            itemCount: things.length,
+            itemCount: thing.length,
             itemBuilder: ((BuildContext context, int posizione) => Card(
                 elevation: 2,
                 child: ListTile(
-                    title: Text(things[posizione].titolo),
-                    subtitle: Text(things[posizione].text))))),
+                    title: Text(thing[posizione].titolo),
+                    subtitle: Text(thing[posizione].text))))),
       );
 
   //addToList() {};
   settingsBtn() => {}; //TepHomePage();
+  void getDB() {
+    thing = [Things("Titolo", "Testo")];
+    setState(() => thing = thing);
+  }
 }
 // TODO settings page
+/*
 class TepSettingsPage extends StatefulWidget {
   @override
   _TepSettingsPageState createState() => _TepSettingsPageState();
@@ -48,7 +59,7 @@ class _TepSettingsPageState extends State<TepHomePage> {
         actions: [IconButton(icon: null, onPressed: null)],
       ),
       body: Center());
-}
+}*/
 
 ColorScheme tepColorScheme = ColorScheme(
   primary: Colors.blue[500], //or 25,118,210
