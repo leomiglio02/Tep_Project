@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sembast/sembast.dart';
+import 'package:sembast/sembast_io.dart';
+import 'package:path/path.dart';
+
+import 'settingScreen.dart';
 import 'Things.dart';
 
-// se c'è un problema con la compilazione xcode eseguire questo codice xattr -cr build/ios/Debug-iphone[simulator o os] 
+// se c'è un problema con la compilazione xcode eseguire questo codice xattr -cr build/ios/Debug-iphone[simulator o os]
 // simulator se si testa in un simulatore
 // os se si testa in un dispositivo
 
@@ -21,7 +25,6 @@ class TepHomePage extends StatefulWidget {
 
 class _TepHomePageState extends State<TepHomePage> {
   List<Things> thing = new List<Things>();
-
   @override
   void initState() {
     getDB();
@@ -31,7 +34,14 @@ class _TepHomePageState extends State<TepHomePage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(title: Text("TèP"), actions: [
-          IconButton(icon: Icon(Icons.settings), onPressed: () => settingsBtn())
+          IconButton(
+            icon: Icon(Icons.settings),
+            onPressed: () {
+              MaterialPageRoute route =
+                  new MaterialPageRoute(builder: (_) => settingScreen());
+              Navigator.push(context, route);
+            },
+          )
         ]),
         body: ListView.builder(
             itemCount: thing.length,
@@ -43,9 +53,14 @@ class _TepHomePageState extends State<TepHomePage> {
       );
 
   //addToList() {};
-  settingsBtn() => {}; //TepHomePage();
-  void getDB() {
-    thing = [Things("Esempio Titolo", "Esempio Testo")]; // TODO completa con la connessione al database
+  void settingsBtn() {}
+  void addDB() async {}
+  void setDB() async {}
+
+  void getDB() async {
+    thing = [
+      Things("Esempio Titolo", "Esempio Testo")
+    ]; // TODO completa con la connessione al database
     setState(() => thing = thing);
   }
 }
