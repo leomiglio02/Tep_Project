@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 //import 'package:sembast/sembast.dart';
 //import 'package:sembast/sembast_io.dart';
 //import 'package:path/path.dart';
+import 'package:preferences/preferences.dart';
+import 'package:dynamic_theme/dynamic_theme.dart';
 
 import 'SettingScreen.dart';
 import 'Things.dart';
@@ -10,12 +12,23 @@ import 'Things.dart';
 // simulator se si testa in un simulatore
 // os se si testa in un dispositivo
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await PrefService.init(prefix: 'pref_');
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => MaterialApp(
-      title: 'TèP', debugShowCheckedModeBanner: true, home: TepHomePage());
+  Widget build(BuildContext context) => DynamicTheme(
+      defaultBrightness: Brightness.light,
+      data: (brightness) => ThemeData(
+          brightness: brightness, accentColor: tepColorScheme.primary),
+      themedWidgetBuilder: (context, theme) => MaterialApp(
+            title: 'TèP',
+            theme: theme,
+            home: TepHomePage(),
+          ));
 }
 
 class TepHomePage extends StatefulWidget {
