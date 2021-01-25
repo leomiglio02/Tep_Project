@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/layout/custom_dialog.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/layout/custom_dialog.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/layout/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/layout/notification_template_icon_group.xml"
+    }
+]

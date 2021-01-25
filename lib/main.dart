@@ -77,22 +77,6 @@ class _TepHomePageState extends State<TepHomePage> {
     setState(() => thing = thing);
   }
 }
-// TODO settings page
-/*
-class TepSettingsPage extends StatefulWidget {
-  @override
-  _TepSettingsPageState createState() => _TepSettingsPageState();
-}
-
-class _TepSettingsPageState extends State<TepHomePage> {
-  @override
-  Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(
-        title: Text('Settings'),
-        actions: [IconButton(icon: null, onPressed: null)],
-      ),
-      body: Center());
-}*/
 
 ColorScheme tepColorScheme = ColorScheme(
   primary: Colors.blue[500], //or 25,118,210

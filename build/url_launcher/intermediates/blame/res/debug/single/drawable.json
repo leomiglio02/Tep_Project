@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/drawable/notification_bg.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/leomi/Desktop/Programmazione/Flutter/TèP/Tep_Project/build/url_launcher/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
+        "source": "/Users/leomi/.gradle/caches/transforms-2/files-2.1/2c8f672ff879eb46d5b97b42e8a106cc/core-1.1.0/res/drawable/notification_icon_background.xml"
+    }
+]

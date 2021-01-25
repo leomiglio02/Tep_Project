@@ -25,7 +25,7 @@ class _SettingScreenState extends State<SettingScreen> {
             SwitchPreference(
               'Dark Theme',
               'uiTheme',
-              defaultVal: true,
+              defaultVal: false,
               onEnable: () =>
                   DynamicTheme.of(context).setBrightness(Brightness.dark),
               onDisable: () =>
