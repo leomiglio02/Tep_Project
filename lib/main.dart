@@ -21,14 +21,15 @@ void main() async {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => DynamicTheme(
-      defaultBrightness: Brightness.light,
-      data: (brightness) => ThemeData(
-          brightness: brightness, accentColor: tepColorScheme.primary),
-      themedWidgetBuilder: (context, theme) => MaterialApp(
-            title: 'TèP',
-            theme: theme,
-            home: TepHomePage(),
-          ));
+        defaultBrightness: Brightness.light,
+        data: (brightness) => ThemeData(
+            brightness: brightness, accentColor: tepColorScheme.primary),
+        themedWidgetBuilder: (context, theme) => MaterialApp(
+          title: 'TèP',
+          theme: theme,
+          home: TepHomePage(),
+        ),
+      );
 }
 
 class TepHomePage extends StatefulWidget {
@@ -57,12 +58,15 @@ class _TepHomePageState extends State<TepHomePage> {
           )
         ]),
         body: ListView.builder(
-            itemCount: thing.length,
-            itemBuilder: ((BuildContext context, int posizione) => Card(
+          itemCount: thing.length,
+          itemBuilder: ((BuildContext context, int posizione) => Card(
                 elevation: 2,
                 child: ListTile(
-                    title: Text(thing[posizione].titolo),
-                    subtitle: Text(thing[posizione].text))))),
+                  title: Text(thing[posizione].titolo),
+                  subtitle: Text(thing[posizione].text),
+                ),
+              )),
+        ),
       );
 
   //addToList() {};
@@ -73,7 +77,7 @@ class _TepHomePageState extends State<TepHomePage> {
   void getDB() async {
     thing = [
       Things("Esempio Titolo", "Esempio Testo")
-    ]; // TODO completa con la connessione al database
+    ]; // TODO: completa con la connessione al database
     setState(() => thing = thing);
   }
 }

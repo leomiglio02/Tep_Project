@@ -4,7 +4,7 @@ class Things{
     
     Things(this.titolo, this.text);
     
-    Things.fromDB(){// TODO completa con collegamento al db
+    Things.fromDB(){// TODO: completa con collegamento al db
 
     }
 }

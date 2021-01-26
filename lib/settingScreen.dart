@@ -15,8 +15,8 @@ class _SettingScreenState extends State<SettingScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-      appBar: AppBar(title: Text("Settings")),
-      body: Padding(
+        appBar: AppBar(title: Text("Settings")),
+        body: Padding(
           padding: EdgeInsets.all(16),
           child: PreferencePage([
             PreferenceTitle("General"),
@@ -32,5 +32,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   DynamicTheme.of(context).setBrightness(Brightness.light),
             ),
             Link(child: Text("\n\n" + about), url: site)
-          ])));
+          ]),
+        ),
+      );
 }
