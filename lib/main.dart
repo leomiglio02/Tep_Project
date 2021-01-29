@@ -50,11 +50,7 @@ class _TepHomePageState extends State<TepHomePage> {
         appBar: AppBar(title: Text("TèP"), actions: [
           IconButton(
             icon: Icon(Icons.settings),
-            onPressed: () {
-              MaterialPageRoute route =
-                  new MaterialPageRoute(builder: (_) => SettingScreen());
-              Navigator.push(context, route);
-            },
+            onPressed: () => settingsPageNavigator(),
           )
         ]),
         body: ListView.builder(
@@ -70,7 +66,9 @@ class _TepHomePageState extends State<TepHomePage> {
       );
 
   //addToList() {};
-  void settingsBtn() {}
+  void settingsPageNavigator() => Navigator.push(
+      context, MaterialPageRoute(builder: (context) => SettingScreen()));
+
   void addDB() async {}
   void setDB() async {}
 
