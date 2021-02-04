@@ -6,7 +6,9 @@ import 'package:preferences/preferences.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 
 import 'SettingScreen.dart';
-import 'Things.dart';
+import 'NewActionScreen.dart';
+import 'ActionScreen.dart';
+import 'Activity.dart';
 
 // se c'è un problema con la compilazione xcode eseguire questo codice xattr -cr build/ios/Debug-iphone[simulator o os]
 // simulator se si testa in un simulatore
@@ -38,7 +40,7 @@ class TepHomePage extends StatefulWidget {
 }
 
 class _TepHomePageState extends State<TepHomePage> {
-  List<Things> thing = new List<Things>();
+  List<Activity> actions = new List<Activity>();
   @override
   void initState() {
     getDB();
@@ -50,33 +52,44 @@ class _TepHomePageState extends State<TepHomePage> {
         appBar: AppBar(title: Text("TèP"), actions: [
           IconButton(
             icon: Icon(Icons.settings),
-            onPressed: () => settingsPageNavigator(),
+            onPressed: () => Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SettingScreen())),
           )
         ]),
         body: ListView.builder(
-          itemCount: thing.length,
-          itemBuilder: ((BuildContext context, int posizione) => Card(
+          itemCount: actions.length,
+          itemBuilder: ((BuildContext context, int i) => Card(
                 elevation: 2,
                 child: ListTile(
-                  title: Text(thing[posizione].titolo),
-                  subtitle: Text(thing[posizione].text),
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ActionScreen(actions[i]))),
+                  title: Text(actions[i].titolo),
+                  subtitle: Text(actions[i].descrizione),
                 ),
               )),
         ),
+        floatingActionButton: FloatingActionButton(
+            elevation: 2,
+            child: Icon(Icons.add),
+            onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NewActionScreen(),
+                ))),
       );
 
   //addToList() {};
-  void settingsPageNavigator() => Navigator.push(
-      context, MaterialPageRoute(builder: (context) => SettingScreen()));
 
   void addDB() async {}
   void setDB() async {}
 
   void getDB() async {
-    thing = [
-      Things("Esempio Titolo", "Esempio Testo")
+    actions = [
+      Activity("Esempio Titolo", "Esempio Testo")
     ]; // TODO: completa con la connessione al database
-    setState(() => thing = thing);
+    setState(() => actions = actions);
   }
 }
 
