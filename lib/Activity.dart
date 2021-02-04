@@ -4,7 +4,8 @@ class Activity{
     
     Activity(this.titolo, this.descrizione);
     
-    Activity.fromDB(){// TODO: completa con collegamento al db
+    Activity.fromDB(){
+      // TODO: completa con collegamento al db
 
     }
 }
